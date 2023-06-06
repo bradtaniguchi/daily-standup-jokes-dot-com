@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "bradlc.vscode-tailwindcss",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "EditorConfig.EditorConfig",
+    "GitHub.github-vscode-theme",
+    "GitHub.vscode-pull-request-github",
+    "johnpapa.vscode-peacock",
+    "mikestead.dotenv",
+    "nrwl.angular-console",
+    "PKief.material-icon-theme",
+    "redhat.vscode-yaml",
+    "streetsidesoftware.code-spell-checker",
+    "styled-components.vscode-styled-components",
+    "wix.vscode-import-cost",
+    "zhuangtongfa.material-theme"
+  ]
+}
