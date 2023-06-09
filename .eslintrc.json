@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/strict",
+    "next/core-web-vitals"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "rules": {
+    "prefer-destructuring": "error",
+    "object-shorthand": "error",
+    "max-params": ["error", 2]
+  }
 }
