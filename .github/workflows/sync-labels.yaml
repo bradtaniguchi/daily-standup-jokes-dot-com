@@ -1,0 +1,17 @@
+# Workflow that syncs all labels for the current repo.
+# see the ./github/labels.yaml file for the list of labels.
+#
+# This workflow is ran manually
+name: sync-labels
+on: workflow_dispatch
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: EndBug/label-sync@v2
+        with:
+          config-file: .github/labels.yaml
+          delete-other-labels: true
+          token: ${{ secrets.GITHUB_TOKEN }}

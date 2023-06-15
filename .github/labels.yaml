@@ -1,0 +1,23 @@
+# List of labels that will be supported
+# all other labels will be removed
+
+# issue template types
+- name: bug
+  description: Something isn't working
+  color: 'd73a4a'
+
+- name: feature
+  description: A new feature to add
+  color: '0052cc'
+
+- name: documentation
+  description: Something related to documentation
+  color: '0075ca'
+
+- name: chore
+  description: A non-code related task
+  color: 'ffffff'
+
+- name: joke
+  description: A joke submission
+  color: 'f9d0c4'
