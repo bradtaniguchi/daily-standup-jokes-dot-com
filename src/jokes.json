@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bradtaniguchi/daily-standup-jokes-dot-com/master/public/jokes-schema.json",
+  "jokes": [
+    {
+      "date": "2023-06-14",
+      "title": "Example Basic Joke",
+      "type": "basic",
+      "text": "This is an example of a basic joke."
+    },
+    {
+      "date": "2023-06-13",
+      "title": "Example Reveal Joke",
+      "type": "reveal",
+      "buttonText": "Click to reveal",
+      "revealText": "This is an example of a reveal joke."
+    }
+  ]
+}

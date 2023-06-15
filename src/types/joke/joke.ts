@@ -54,6 +54,8 @@ export interface BasicJoke extends Joke {
 /**
  * Type-guard that returns if the given object is a valid basic joke.
  * Relies on nested type-guards.
+ * 
+ * TODO: verify extra properties
  *
  * @param joke the object to check
  * @returns if the given object is a valid basic joke.
@@ -66,6 +68,10 @@ export const isBasicJoke = (joke: unknown): joke is BasicJoke =>
  * clicks on the button described by the "buttonText" attribute.
  */
 export interface RevealJoke extends Joke {
+  /**
+   * The text that is shown by default
+   */
+  shownText: string;
   /**
    * The text that is shown on the reveal button.
    */
@@ -80,6 +86,7 @@ export interface RevealJoke extends Joke {
 /**
  * Type-guard that returns if the given object is a valid reveal joke.
  *
+ * TODO: verify extra properties
  * @param joke the object to check
  * @returns if the given object is a valid reveal joke.
  */

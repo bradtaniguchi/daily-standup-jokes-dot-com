@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "jokes": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "date",
+            "title",
+            "type",
+            "text"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "buttonText": {
+              "type": "string"
+            },
+            "revealText": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "date",
+            "title",
+            "type",
+            "buttonText",
+            "revealText"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "jokes"
+  ]
+}
