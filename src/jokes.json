@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/bradtaniguchi/daily-standup-jokes-dot-com/master/public/jokes-schema.json",
+  "$schema": "https://raw.githubusercontent.com/bradtaniguchi/daily-standup-jokes-dot-com/main/public/jokes-schema.json",
   "jokes": [
     {
       "date": "2023-06-14",
