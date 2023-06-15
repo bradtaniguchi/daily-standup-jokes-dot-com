@@ -1,6 +1,4 @@
-import Image from 'next/image';
-
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <h1 className="text-2xl font-extrabold">Daily Standup Jokes</h1>
