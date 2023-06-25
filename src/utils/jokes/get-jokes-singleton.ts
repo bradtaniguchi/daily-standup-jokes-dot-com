@@ -1,6 +1,4 @@
 import { JokeFile, isJokeFile } from '@/types/joke-file';
-import fs from 'fs-extra';
-import path from 'path';
 
 /**
  * The singleton promise of the jokes files being loaded from the filesystem.
@@ -17,14 +15,14 @@ let _jokesSingleton: Promise<JokeFile> | undefined;
  * @param params the parameters for the function
  * @param params.bustCache if we are to wipe the previous cache and get a new one
  */
-export const getJokesSingleton =  (params: {
+export const getJokesSingleton =  async (params: {
   bustCache?: boolean
 } = {bustCache: false}): Promise<JokeFile> => {
   const {bustCache} = params;
   
   if (_jokesSingleton && !bustCache) return _jokesSingleton;
 
-  const rawJokesFile$ = fs.readJson(path.join(__dirname, '../jokes.json'));
+  const rawJokesFile$ = import('../../jokes.json');
 
   _jokesSingleton = rawJokesFile$.then((jokesFile) => {
     if (!isJokeFile(jokesFile)) throw new Error('Invalid jokes file');
