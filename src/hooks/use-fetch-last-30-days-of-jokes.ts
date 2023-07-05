@@ -1,5 +1,5 @@
-import { Joke } from "@/types/joke/joke";
-import { useEffect, useState } from "react";
+import { Joke } from '@/types/joke/joke';
+import { useEffect, useState } from 'react';
 
 /**
  * Custom hook to fetch the last 30 days of jokes from the API
@@ -15,21 +15,29 @@ export const useFetchLast30DaysOfJokes = (): {
   const [jokes, setJokes] = useState<Joke[]>([]);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const { signal } = controller;
+
     setLoading(true);
-    fetch('/api/jokes')
+    fetch('/api/jokes', { signal })
       .then((response) => response.json())
       .then((json) => {
         setJokes(json);
       })
       .catch((error) => {
         setError(error);
-      }).finally(() => {
+      })
+      .finally(() => {
         setLoading(false);
       });
+
+    return () => {
+      controller.abort();
+    };
   }, []);
 
   return {
-    loading, 
+    loading,
     error,
     jokes,
   };
